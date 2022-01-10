@@ -2,6 +2,14 @@ from django.test import SimpleTestCase
 from django.urls import reverse, resolve
 from core.views import CameraList, CameraSpecific, CameraQuery, CameraFind
 
+
+"""
+Run all unit tests in 'tests' folder:
+1) python manage.py runserver
+2) (in another terminal) python manage.py test
+"""
+
+
 class TestUrls(SimpleTestCase):
 
     def test_camera_list_resolves(self):

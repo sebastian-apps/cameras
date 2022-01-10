@@ -24,6 +24,7 @@ def index(request):
 class CameraList(APIView):
     """ Request all cameras """
     def get(self, request):
+
         cameras = Camera.objects.all()
         data = CameraSerializer(cameras, many=True).data
         return Response(data)

@@ -10,6 +10,13 @@ TIMEOUT = 1
 LOCALHOST = "http://localhost:8000/"
 
 
+"""
+Run all unit tests in 'tests' folder:
+1) python manage.py runserver
+2) (in another terminal) python manage.py test
+"""
+
+
 class CameraTestCase(TestCase):
 
     @classmethod
@@ -17,6 +24,7 @@ class CameraTestCase(TestCase):
         """
             Set up four cameras to start.
             Camera 1 (i.e., camera_id: 1) has the most image files.
+            Camera 2 has nothing special.
             Camera 3 has used the most data and has the largest file.
             Camera 4 has no images.
         """
@@ -83,7 +91,7 @@ class CameraTestCase(TestCase):
         for i in range(5, N_CAMERAS):  # Start at 5 because 4 cameras have already been created.
             cam = Camera.objects.create(camera_id=i)
             for j in range(M_FILES):
-              Image.objects.create(camera=cam, file_size=random.randint(1,5001)*1024) 
+                Image.objects.create(camera=cam, file_size=random.randint(1,5001)*1024) 
 
         # Test cameras.
         cameras = Camera.objects.all()
@@ -108,7 +116,7 @@ class CameraTestCase(TestCase):
         for i in range(5, N_CAMERAS):  # Start at 5 because 4 cameras have already been created.
             cam = Camera.objects.create(camera_id=i)
             for j in range(M_FILES):
-              Image.objects.create(camera=cam, file_size=random.randint(1,5001)*1024)
+                Image.objects.create(camera=cam, file_size=random.randint(1,5001)*1024)
 
         # Test cameras.
         url = reverse('core:camera_list')
