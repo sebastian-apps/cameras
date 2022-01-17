@@ -6,7 +6,7 @@ import requests
 
 N_CAMERAS = 100  # minimum 6
 M_FILES = 100
-TIMEOUT = 1
+TIMEOUT = 10
 LOCALHOST = "http://localhost:8000/"
 
 
