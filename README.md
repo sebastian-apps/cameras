@@ -81,13 +81,13 @@ cd cameras
 python -m venv cam_env
 ```
 
-Activate the virtual environment <i>for OSX</i>.
+Activate the virtual environment for OSX.
 
 ```
 source cam_env/bin/activate
 ```
 
-Activate the virtual environment <i>for Windows</i>.
+Activate the virtual environment for Windows.
 
 ```
 cam_env\Scripts\activate
