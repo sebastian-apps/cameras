@@ -6,4 +6,4 @@ python manage.py makemigrations
 python manage.py migrate
 mv core/migrations/temp/0002_insert_default.py core/migrations
 python manage.py migrate
-echo "Files db.sqlite3 removed and new Django SQLite migrated."
+echo "db.sqlite3 removed and new Django SQLite migrated."
