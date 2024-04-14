@@ -81,7 +81,7 @@ cd cameras
 python -m venv cam_env
 ```
 
-Activate the virtual environment for OSX.
+Activate the virtual environment for Mac.
 
 ```
 source cam_env/bin/activate
